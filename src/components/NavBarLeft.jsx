@@ -3,7 +3,7 @@ import "./NavBarLeft.css";
 export default function NavBarLeft() {
 
     return (
-        <nav className="navbar-left">
+        <nav className="navbar_left">
             NavBarLeft
         </nav>
     );

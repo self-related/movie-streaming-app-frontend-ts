@@ -1,3 +1,7 @@
-.split {
+.main--split {
     display: flex;
+}
+
+.page_content {
+    padding-left: 20px;
 }

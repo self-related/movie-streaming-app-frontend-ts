@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-        <main className="split">
+        <main className="main--split">
             <NavBarLeft />
-            <div className="content">
+            <div className="page_content">
                 <div>Header</div>
                 <Outlet />
                 <div>footer</div>
