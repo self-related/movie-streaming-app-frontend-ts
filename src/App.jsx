@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import './App.css'
 import NavBarLeft from './components/NavBarLeft';
+import NavBarTop from './components/NavBarTop';
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
         <main className="main--split">
             <NavBarLeft />
             <div className="page_content">
-                <div>Header</div>
+                <NavBarTop />
                 <Outlet />
                 <div>footer</div>
             </div>

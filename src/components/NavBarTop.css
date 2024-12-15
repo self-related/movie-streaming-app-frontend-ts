@@ -1,0 +1,47 @@
+.navbar_top {
+    width: 100%;
+    min-width: 700px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    padding-top: 35px;
+    margin-bottom: 25px;
+}
+
+.navbar_top__wrapper {
+    margin: 0 30px;
+
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navbar_top__wrapper--shrink {
+    gap: 15px;
+}
+
+.navbar_top__link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar_top__button {
+    background-color: transparent;
+    color: white;
+
+    border: none;
+    
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.navbar_top__button img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
