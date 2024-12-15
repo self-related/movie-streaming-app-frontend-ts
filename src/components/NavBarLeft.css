@@ -2,7 +2,45 @@
 .navbar_left {
     width: 20%;
     height: 100vh;
-    min-width: 150px;
+
+    min-width: 200px;
+    
     padding-top: 30px;
-    padding-left: 30px;
+    padding-left: 35px;
+
+    overflow-y: scroll;
+}
+
+.navbar_left__logo {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 6%;
+
+    margin-top: 5px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.navbar_left__logo img {
+    height: 32px;
+    vertical-align: text-bottom;
+}
+
+.navbar_left__link {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 25px;
+}
+.navbar_left__link img {
+    height: 24px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+
+.navbar_left__wrapper_div {
+    margin-top: 60px;
 }
