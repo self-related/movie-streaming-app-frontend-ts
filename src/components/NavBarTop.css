@@ -1,6 +1,9 @@
 .navbar_top {
+    position: absolute;
+    z-index: 2;
+
     width: 100%;
-    min-width: 700px;
+    min-width: 500px;
 
     display: flex;
     justify-content: space-between;
