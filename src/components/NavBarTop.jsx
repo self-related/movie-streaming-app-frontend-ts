@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./NavBarTop.css";
 import { useEffect, useState } from "react";
+import SearchIcon from "../assets/icons/search.svg";
+import BellIcon from "../assets/icons/bell.svg";
 
 export default function NavBarTop() {
     const [userData, setUserData] = useState(null);
@@ -25,8 +27,8 @@ export default function NavBarTop() {
 
             {/* правая часть панели */}
             <div className="navbar_top__wrapper navbar_top__wrapper--shrink">
-                <button className="navbar_top__button"> <img src="/icons/search.svg" alt="search" /> </button>
-                <button className="navbar_top__button"> <img src="/icons/bell.svg" alt="search" /> </button>
+                <button className="navbar_top__button"> <img src={SearchIcon} alt="search" /> </button>
+                <button className="navbar_top__button"> <img src={BellIcon} alt="bell" /> </button>
                 {
                     userData 
                     ? (<button className="navbar_top__button"> <img src={userData.image} alt="user image"/> {userData.name} </button>)
