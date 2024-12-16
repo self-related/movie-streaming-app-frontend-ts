@@ -3,13 +3,6 @@ import HeartIcon from "../../assets/icons/heart.svg";
 
 export default function BannerTrending({trendingMovie}) {
     const {name: movieName, image: movieImage, ...movieInfo} = trendingMovie;
-    movieInfo.season 
-    const movieDescription = [];
-    for (const key in trendingMovie) {
-        if (trendingMovie[key] !== null) {
-            movieDescription.push(trendingMovie[key]);
-        }
-    }
 
     return (
         <div className="banner_trending" >
