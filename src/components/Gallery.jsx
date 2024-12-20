@@ -1,7 +1,7 @@
 import "./Gallery.css";
 
 export default function Gallery({movies, large}) {
-    const thumbnailType = large ? "large" : "compact"
+    const thumbnailType = large ? "large" : "compact"; // аттрибут для широких/узких превью
 
     const moviesList = movies?.map(({image, info}, index) => (
         <div className={`thumbnail thumbnail--${thumbnailType}`} key={index}>

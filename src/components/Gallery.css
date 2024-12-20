@@ -12,12 +12,13 @@
     border-radius: 152px;
 }
 
+/* модификатор для широкого превью */
 .thumbnail--large {
     width: 17%;
     min-width: 348px;
     aspect-ratio: 16/10;
 }
-
+/* модификатор для узкого превью (по-умолчанию) */
 .thumbnail--compact {
     width: 17%;
     min-width: 220px;
