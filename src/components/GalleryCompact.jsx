@@ -1,14 +1,5 @@
 import "./GalleryCompact.css"
 
-/**
- * @typedef {Object} Movie
- * @prop {String} Movie.name
- * @prop {String} Movie.genre
- * @prop {String} Movie.year 
- * 
- * @param {Object} props - GalleryCompact props
- * @param {Array<Movie>} props.movies - тип для {movies}
-*/
 export default function GalleryCompact({movies}) {
 
     const moviesList = movies?.map(({image, info}, index) => (
