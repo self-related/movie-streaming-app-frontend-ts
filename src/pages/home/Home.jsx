@@ -4,6 +4,7 @@ import BannerImage from "../../assets/banner.svg";
 import GalleryCompact from "../../components/GalleryCompact";
 import { useState } from "react";
 import { useEffect } from "react";
+import GalleryLarge from "../../components/GalleryLarge";
 
 export default function Home() {
     // временная заглушка на баннер
@@ -16,11 +17,18 @@ export default function Home() {
     }
 
     const [trendingMovies, setTrendingMovies] = useState(null);
+    const [continueMovies, setContinueMovies] = useState(null);
 
     useEffect(() => {
         fetch("/temp_trending_movies.json")
         .then(res => res.json())
         .then(data => setTrendingMovies(data));
+
+        fetch("/temp_continue_movies.json")
+        .then(res => res.json())
+        .then(data => setContinueMovies(data));
+
+
     }, []);
 
     
@@ -31,7 +39,10 @@ export default function Home() {
                 <h2>Trending</h2>
                 <GalleryCompact movies={trendingMovies} />
             </div>
-            <div>Continue watching</div>
+            <div className="continue_block">
+                <h2>Continue watching</h2>
+                <GalleryLarge movies={continueMovies} />
+            </div>
         </div>
     );
 }
