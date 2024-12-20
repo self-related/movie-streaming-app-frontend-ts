@@ -1,10 +1,9 @@
 import BannerTrending from "./BannerTrending";
 import "./Home.css";
 import BannerImage from "../../assets/banner.svg";
-import GalleryCompact from "../../components/GalleryCompact";
 import { useState } from "react";
 import { useEffect } from "react";
-import GalleryLarge from "../../components/GalleryLarge";
+import Gallery from "../../components/Gallery";
 
 export default function Home() {
     // временная заглушка на баннер
@@ -37,11 +36,11 @@ export default function Home() {
             <BannerTrending trendingMovie={trendingMovie} />
             <div className="trending_block">
                 <h2>Trending</h2>
-                <GalleryCompact movies={trendingMovies} />
+                <Gallery movies={trendingMovies} />
             </div>
             <div className="continue_block">
                 <h2>Continue watching</h2>
-                <GalleryLarge movies={continueMovies} />
+                <Gallery movies={continueMovies} large />
             </div>
         </div>
     );
