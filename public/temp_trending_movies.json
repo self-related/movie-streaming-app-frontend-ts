@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "description": {
+        "info": {
             "name": "Tokyo Train",
             "year": 2022,
             "genre": "Action comedy"
@@ -11,7 +11,7 @@
 
     {
         "id": 2,
-        "description": {
+        "info": {
             "name": "Moonfall",
             "year": 2022,
             "genre": "Sci-fi"
@@ -21,7 +21,7 @@
 
     {
         "id": 3,
-        "description": {
+        "info": {
             "name": "Life in Paris",
             "year": 2023,
             "genre": "Documentary series"
@@ -31,7 +31,7 @@
 
     {
         "id": 4,
-        "description": {
+        "info": {
             "name": "House of Gucci",
             "year": 2021,
             "genre": "Drama"
