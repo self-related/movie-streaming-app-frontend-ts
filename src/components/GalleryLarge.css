@@ -9,8 +9,8 @@
 
 .thumbnail_large {
     position: relative;
-    /* width: 17%; */
-    width: 348px;
+    width: 17%;
+    min-width: 348px;
     aspect-ratio: 16/10;
 
     border-radius: 152px;
