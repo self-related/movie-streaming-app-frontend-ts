@@ -11,13 +11,12 @@ import "./GalleryCompact.css"
 */
 export default function GalleryCompact({movies}) {
 
-
-    const moviesList = movies?.map((movie, index) => (
+    const moviesList = movies?.map(({image, description}, index) => (
         <div className="thumbnail_compact" key={index}>
-            <img src={movie.image} alt={movie.name} className="thumbnail_compact__image" />
+            <img src={image} alt={description.name} className="thumbnail_compact__image" />
             <div className="thumbnail_compact__info">
-                <h3>{movie.name}</h3>
-                <p>{movie.year} | {movie.genre}</p>
+                <h3>{description.name}</h3>
+                <p>{description.year} | {description.genre}</p>
             </div>
         </div>
     ));
