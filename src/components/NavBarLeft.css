@@ -12,7 +12,7 @@
 }
 
 .navbar_left__logo {
-    font-size: 22px;
+    font-size: 1.4rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -28,7 +28,7 @@
 }
 
 .navbar_left__link {
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     display: block;
