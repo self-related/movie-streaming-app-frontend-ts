@@ -27,7 +27,7 @@ export default function Home() {
     return (
         <div className="home_wrapper">
             <BannerTrending trendingMovie={trendingMovie} />
-            <div>
+            <div className="trending_block">
                 <h2>Trending</h2>
                 <GalleryCompact movies={trendingMovies} />
             </div>

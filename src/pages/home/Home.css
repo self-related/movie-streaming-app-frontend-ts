@@ -14,3 +14,7 @@ h2 {
     background: linear-gradient(180deg, #6100c220 5%, transparent 100%  );
     z-index: 1;
 }
+
+.trending_block {
+    width: 100%;
+}
