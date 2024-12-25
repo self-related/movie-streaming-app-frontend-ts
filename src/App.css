@@ -11,4 +11,6 @@ main {
     position: relative;
     width: 100%;
     min-width: 300px;
+    background: linear-gradient(to right, rgba(51, 0, 128, 0.225) 0%, transparent 4%, transparent 100%);
+
 }
