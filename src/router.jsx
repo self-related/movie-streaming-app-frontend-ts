@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/home/Home";
+import Trending from "./pages/trending/Trending";
 
 export const mainRouter = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ export const mainRouter = createBrowserRouter([
             },
             {
                 path: "/trending",
-                element: <div>Temp Trending Page</div>,
+                element: <Trending />,
             },
             {
                 path: "/welcome",
