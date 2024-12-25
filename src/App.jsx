@@ -12,7 +12,6 @@ function App() {
             <div className="page_content">
                 <NavBarTop />
                 <Outlet />
-                <div>footer</div>
             </div>
         </main>
     </>
