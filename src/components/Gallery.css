@@ -74,21 +74,24 @@
     font-size: 0.875rem;
 }
 
+
+/* ниже инфоблок (клик по превью) */
+
 .detailed-info-block {
     display: flex;
-
 }
 
 .detailed-info-block__image_block {
     padding: 1rem 1.2rem;
     height: 80%;
-    width: 50%;
+    width: 40%;
 }
 
 .detailed-info-block__image_block img {
    height: 100%;
-   max-width: 100%;
+   width: 100%;
    object-fit: cover;
+   object-position: bottom center;
    border: 2px solid rgb(121, 121, 112);
    border-radius: 20px;
 }
@@ -115,9 +118,10 @@
 
 
 .detailed-info-block__text {
-    width: 40%;
+    width: 50%;
     padding-right: 3rem;
     padding-top: 4rem;
+    margin-left: 1rem;
 }
 
 .detailed-info-block__info {
