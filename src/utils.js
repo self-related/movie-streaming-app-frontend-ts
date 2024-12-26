@@ -9,3 +9,11 @@ export const getDurationString = (minutes) => {
         :  `${hours}h`;
     }
 };
+
+export const getShortDescription = (string) => {
+    if (string.length > 200) {
+        string = string.split("").slice(0, 199).join("");
+        return string.trim() + "...";
+    }
+    return string;
+};

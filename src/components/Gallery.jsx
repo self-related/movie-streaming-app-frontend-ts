@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Gallery.css";
 import HeartIcon from "../assets/icons/heart.svg";
-import { getDurationString } from "../utils";
+import { getDurationString, getShortDescription } from "../utils";
 
 
 export default function Gallery({movies, large}) {
@@ -82,7 +82,7 @@ export default function Gallery({movies, large}) {
                                 </p>
 
                                 {/* тут описание фильма */}
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptates assumenda cupiditate reiciendis aperiam eveniet provident autem, quisquam maiores itaque doloremque dolore tenetur vero dicta molestias dignissimos. Cum, ducimus aut!</p>
+                                <p>{getShortDescription(detailedInfo?.info?.description)}</p>
                                 <button className="detailed_info__watch_button">Watch now</button>
                                 <button className="detailed_info__like_button"> <img src={HeartIcon} height="10px"/> </button>
 
