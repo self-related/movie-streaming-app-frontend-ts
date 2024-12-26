@@ -77,58 +77,98 @@
 
 /* ниже инфоблок (клик по превью) */
 
-.detailed-info-block {
+.detailed_info {
     display: flex;
 }
 
-.detailed-info-block__image_block {
+.detailed_info__image_block {
     padding: 1rem 1.2rem;
     height: 80%;
     width: 40%;
 }
 
-.detailed-info-block__image_block img {
-   height: 100%;
+.detailed_info__image_block img {
+   max-height: 100%;
    width: 100%;
+   aspect-ratio: 1/1;
    object-fit: cover;
-   object-position: bottom center;
+   object-position: center;
    border: 2px solid rgb(121, 121, 112);
    border-radius: 20px;
 }
 
-.detailed-info-block__header {
+
+.detailed_info__text_block {
+    width: 50%;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    margin-left: 1rem;
+}
+
+.detailed_info__metadata {
+    margin: 0;
+    margin-top:0.5rem;
+}
+
+.detailed_info__text_block > p span {
+    margin-right: 2rem;
+}
+
+.detailed_info__header {
     font-size: 1.6rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
-.detailed-info-block__header > h3 {
+.detailed_info__header > h3 {
     margin: 0;
 }
-.detailed-info-block__header > p {
+
+.detailed_info__header > p {
     font-size: 1.2rem;
     padding: 0;
     margin: 0;
+    align-self: baseline;
+
 }
-.detailed-info-block__header > p span {
+.detailed_info__header > p span {
     color: #FFC01E;
     font-size: 1.7rem;
     margin-right: 0.5rem;
 }
 
 
-.detailed-info-block__text {
-    width: 50%;
-    padding-right: 3rem;
-    padding-top: 4rem;
-    margin-left: 1rem;
-}
+/* инфоблок: кнопки "watch" и like*/
+.detailed_info__watch_button {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: #6100C2;
 
-.detailed-info-block__info {
-    margin: 0;
-    margin-top:0.5rem;
-}
+    width: 139px;
+    height: 54px;
 
-.detailed-info-block__text > p span {
-    margin-right: 2rem;
+    border-radius: 14px;
+    border: none;
+
+    cursor: pointer;
+
+    margin-right: 1rem;
+}
+.detailed_info__like_button {
+    color: #6100C2;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    background: linear-gradient(to right, white 15%, rgb(176, 176, 176) 100%);
+
+    vertical-align: top;
+}
+.detailed_info__like_button img {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
 }
