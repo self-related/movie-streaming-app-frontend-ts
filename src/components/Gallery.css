@@ -78,9 +78,31 @@
 /* ниже инфоблок (клик по превью) */
 
 .detailed_info {
+    position: relative;
     display: flex;
 }
 
+/* кнопка закрыть блок (крестик справа сверху) */
+.detailed_info__close_button {
+    position: absolute;
+    top: 0%;
+    right: 3%;
+    background: none;
+    border: none;
+
+
+    font-size: 2.5rem;
+    color: rgb(153, 149, 149);
+    font-weight: 300;
+    cursor: pointer;
+    border-radius: 999px;
+}
+
+.detailed_info__close_button:hover {
+    color: white;
+}
+
+/* картинка инфоблока (слева)*/
 .detailed_info__image_block {
     padding: 1rem 1.2rem;
     height: 80%;
@@ -97,12 +119,12 @@
    border-radius: 20px;
 }
 
-
+/* текст инфоблока справа */
 .detailed_info__text_block {
-    width: 50%;
-    padding-right: 1rem;
-    padding-top: 3rem;
+    width: 60%;
+    margin-top: 3rem;
     margin-left: 1rem;
+    margin-right: 2rem;
 }
 
 .detailed_info__metadata {
@@ -137,7 +159,7 @@
 }
 
 
-/* инфоблок: кнопки "watch" и like*/
+/* текст инфоблока: кнопки "watch" и like*/
 .detailed_info__watch_button {
     font-size: 1rem;
     font-family: "Poppins", sans-serif;

@@ -26,6 +26,9 @@ export default function Gallery({movies, large}) {
         });
     };
 
+    const handleCloseDetailedPreview = () => {
+        setDetailedInfo(null);
+    };
     // эффект - прокрутить до выбранного превью
     useEffect(() => {
         if (detailedInfo === null) {
@@ -63,7 +66,7 @@ export default function Gallery({movies, large}) {
                     detailedInfo
                     ? (
                         <div className="detailed_info" style={{height: window.innerHeight - 271}} >
-                            
+                            <button className="detailed_info__close_button" onClick={handleCloseDetailedPreview}>x</button>
                             <div className="detailed_info__image_block">
                                 <img src={`${detailedInfo?.image}`} alt={detailedInfo?.info?.name} />
                             </div>
