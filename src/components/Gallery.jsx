@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Gallery.css";
 import HeartIcon from "../assets/icons/heart.svg";
+import { getDurationString } from "../utils";
 
 
 export default function Gallery({movies, large}) {
@@ -55,7 +56,7 @@ export default function Gallery({movies, large}) {
     return (
         <>
             <div className="gallery">
-                {moviesList ?? "..."}
+                {moviesList ?? "Loading..."}
             </div>
                 {
                     /* ифноблок по клику на превью */
@@ -77,7 +78,7 @@ export default function Gallery({movies, large}) {
                                 <p className="detailed_info__metadata">
                                     <span>{detailedInfo?.info?.year}</span> 
                                     <span>{detailedInfo?.info?.genre}</span> 
-                                    <span>{detailedInfo?.info?.duration}2hrs</span>
+                                    <span>{getDurationString(detailedInfo?.info?.duration)}</span>
                                 </p>
 
                                 {/* тут описание фильма */}
