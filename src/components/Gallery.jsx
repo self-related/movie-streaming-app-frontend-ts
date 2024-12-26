@@ -61,17 +61,21 @@ export default function Gallery({movies, large}) {
                     ? (
                         <div className="detailed-info-block" style={{height: window.innerHeight - 271}} >
                             
-                            <div className="detailed-info-block__image">
+                            <div className="detailed-info-block__image_block">
                                 <img src={`${detailedInfo?.image}`} alt={detailedInfo?.info?.name} />
                             </div>
 
-                            <div className="detailed-info-block__text">    
-                                <h3>{detailedInfo?.info?.name}</h3>
+                            <div className="detailed-info-block__text">
 
-                                <p>
+                                <div className="detailed-info-block__header">
+                                    <h3>{detailedInfo?.info?.name}</h3> 
+                                    <p><span>★</span>10/10</p>
+                                </div>
+
+                                <p className="detailed-info-block__info">
                                     <span>{detailedInfo?.info?.year}</span> 
                                     <span>{detailedInfo?.info?.genre}</span> 
-                                    <span>{detailedInfo?.info?.duration}</span>
+                                    <span>{detailedInfo?.info?.duration}2hrs</span>
                                 </p>
 
                                 {/* тут описание фильма */}
