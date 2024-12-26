@@ -72,7 +72,7 @@ export default function Gallery({movies, large}) {
 
                                 <div className="detailed_info__header">
                                     <h3>{detailedInfo?.info?.name}</h3> 
-                                    <p><span>★</span>10/10</p>
+                                    <p><span>★</span>{detailedInfo?.info?.rating}/10</p>
                                 </div>
 
                                 <p className="detailed_info__metadata">
