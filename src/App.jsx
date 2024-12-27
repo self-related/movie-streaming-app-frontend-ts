@@ -5,7 +5,7 @@ import NavBarTop from './components/NavBarTop';
 import { createContext, useContext, useState } from 'react';
 import DetailedInfo from './components/DetailedInfo';
 
-const ClickedMovieContext = createContext(null);
+const ClickedMovieContext = createContext({});
 
 export const useClickedMovieContext = () => useContext(ClickedMovieContext);
 

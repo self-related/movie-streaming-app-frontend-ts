@@ -11,6 +11,7 @@
 .thumbnail {
     position: relative;
     cursor: pointer;
+    z-index: 10;
 }
 
 .thumbnail:hover::after {
@@ -40,6 +41,7 @@
 .thumbnail > img {
     height: 100%;
     width: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 17px;
 }

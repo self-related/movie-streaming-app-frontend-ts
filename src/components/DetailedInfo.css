@@ -1,20 +1,35 @@
+.detailed_info__empty_space {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.detailed_info__empty_space:hover {
+    background-color: rgba(46, 45, 43, 0.314);
+}
+
 
 /* ниже инфоблок (клик по превью) */
 
 .detailed_info {
     position: fixed;
     display: flex;
-    align-items: center;
-    top: 40%;
+    align-items: start;
+    bottom: 0%;
     left: 0%;
     height: 60%;
     width: 100%;
-    min-width: 900px;
     min-height: 300px;
+    min-width: 700px;
     z-index: 30;
     background-color: #21201E;
 
-    padding-left: 15%;
+    padding-left: max(17%, 230px);
+
+    overflow-y: scroll;
 }
 
 /* кнопка закрыть блок (крестик справа сверху) */
@@ -42,7 +57,7 @@
     padding: 1rem 1.2rem;
     height: 80%;
     width: 40%;
-    min-width: 350px;
+    min-width: 250px;
 }
 
 .detailed_info__image_block img {
