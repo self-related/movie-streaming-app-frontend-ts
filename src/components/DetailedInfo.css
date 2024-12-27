@@ -1,3 +1,5 @@
+
+/* пустая область, чтобы по клику сбросить текущий выбор фильма */
 .detailed_info__empty_space {
     height: 100%;
     width: 100%;
@@ -6,11 +8,6 @@
     left: 0;
     z-index: 5;
 }
-
-.detailed_info__empty_space:hover {
-    background-color: rgba(46, 45, 43, 0.314);
-}
-
 
 /* ниже инфоблок (клик по превью) */
 

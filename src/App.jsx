@@ -7,7 +7,7 @@ import DetailedInfo from './components/DetailedInfo';
 
 const ClickedMovieContext = createContext({});
 
-export const useClickedMovieContext = () => useContext(ClickedMovieContext);
+export const useClickedMovieContext = () => useContext(ClickedMovieContext); // сразу получить контекст через хук
 
 function App() {
 

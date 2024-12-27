@@ -44,8 +44,8 @@ export default function Gallery({movies, large}) {
     }, [clickedMovie]);
 
     const moviesList = movies?.map(({image, info, id}, index) => (
-        <div className={`thumbnail thumbnail--${thumbnailType}`} key={index} onClick={handleThumbnailClick(id, image, info)}>
-            <img src={image} alt={info.name} className="thumbnail__image" />
+        <div className={`thumbnail thumbnail--${thumbnailType} ${clickedMovie && clickedMovie?.id !== id ? "thumbnail--shadowed" : ""}`} key={index} onClick={handleThumbnailClick(id, image, info)}>
+            <img src={image} alt={info.name} className="thumbnail__image}" />
             <div className="thumbnail__info">
                 <h3>{info.name}</h3>
                 <p>{info.year} | {info.genre}</p>
