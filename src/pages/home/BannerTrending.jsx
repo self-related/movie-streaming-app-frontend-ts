@@ -1,7 +1,9 @@
 import "./BannerTrending.css";
 import HeartIcon from "../../assets/icons/heart.svg";
+import { handleLikeClick } from "../../utils";
 
 export default function BannerTrending({trendingMovie}) {
+    // статическая заглушка для баннера
     const {name: movieName, image: movieImage, ...movieInfo} = trendingMovie;
 
     return (
@@ -12,7 +14,9 @@ export default function BannerTrending({trendingMovie}) {
                 <p className="banner_trending__description"> {Object.values(movieInfo).join(" | ")} </p>
                 <div className="banner_trending__buttons">
                     <button className="banner_trending__watch_button">Watch now</button>
-                    <button className="banner_trending__like_button"> <img src={HeartIcon} height="10px"/> </button>
+                    <button className="banner_trending__like_button" onClick={handleLikeClick}> 
+                        <img src={HeartIcon} height="10px"/> 
+                    </button>
                 </div>
             </div>
         </div>

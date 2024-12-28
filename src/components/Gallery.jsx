@@ -3,6 +3,7 @@ import "./Gallery.css";
 import { useClickedMovieContext } from "../App";
 import LikeIcon from "../assets/icons/heart.svg";
 import LikeIconPressed from "../assets/icons/like-icon-pressed.svg";
+import { handleLikeClick } from "../utils";
 
 
 
@@ -29,9 +30,11 @@ export default function Gallery({movies, large}) {
 
     };
 
+
+
     // эффект - прокрутить до выбранного превью
     useEffect(() => {
-        if (clickedMovie === null) {
+        if (clickedMovie == null) {
             return;
         }
 
@@ -48,14 +51,17 @@ export default function Gallery({movies, large}) {
 
     const moviesList = movies?.map(({image, info, id}, index) => (
         <div className={`thumbnail thumbnail--${thumbnailType} ${clickedMovie && clickedMovie?.id !== id ? "thumbnail--shadowed" : ""}`} key={index} onClick={handleThumbnailClick(id, image, info)}>
-            <button className="thumbnail__like_button"> 
+            
+            <button className="thumbnail__like_button" onClick={handleLikeClick}> 
                 <img src={info.is_favorite ? LikeIconPressed : LikeIcon} alt="like button"  /> 
             </button>
-            <img src={image} alt={info.name} className="thumbnail__image}" />
+
+            <img src={image} alt={info.name} className="thumbnail__image" />
             <div className="thumbnail__info">
                 <h3>{info.name}</h3>
                 <p>{info.year} | {info.genre}</p>
             </div>
+            
         </div>
     ));
 

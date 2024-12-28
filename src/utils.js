@@ -17,3 +17,8 @@ export const getShortDescription = (string) => {
     }
     return string;
 };
+
+export const handleLikeClick = (event) => {
+    event.stopPropagation();
+    alert("Нет бэка чтобы изменить лайк");
+};
