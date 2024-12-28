@@ -1,5 +1,6 @@
 import { useClickedMovieContext } from "../App";
-import HeartIcon from "../assets/icons/heart.svg";
+import LikeIcon from "../assets/icons/heart.svg";
+import LikeIconPressed from "../assets/icons/like-icon-pressed.svg";
 import { getDurationString, getShortDescription } from "../utils";
 import "./DetailedInfo.css";
 
@@ -41,7 +42,7 @@ export default function DetailedInfo() {
                     {/* тут описание фильма */}
                     <p>{getShortDescription(clickedMovie?.info?.description)}</p>
                     <button className="detailed_info__watch_button">Watch now</button>
-                    <button className="detailed_info__like_button"> <img src={HeartIcon} height="10px"/> </button>
+                    <button className="detailed_info__like_button"> <img src={clickedMovie?.info?.is_favorite ? LikeIconPressed : LikeIcon} height="10px"/> </button>
 
                 </div>
             </div>
