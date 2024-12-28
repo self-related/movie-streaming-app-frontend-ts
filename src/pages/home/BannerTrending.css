@@ -4,7 +4,7 @@
     height: fit-content;
     z-index: 1;
 }
-.banner_trending img {
+.banner_trending > img {
     width: 100%;
     height: 350px;
     object-fit: cover;
