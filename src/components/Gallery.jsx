@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import "./Gallery.css";
 import { useClickedMovieContext } from "../App";
+import LikeIcon from "../assets/icons/heart.svg";
+import LikeIconPressed from "../assets/icons/like-icon-pressed.svg";
+
 
 
 export default function Gallery({movies, large}) {
@@ -45,6 +48,9 @@ export default function Gallery({movies, large}) {
 
     const moviesList = movies?.map(({image, info, id}, index) => (
         <div className={`thumbnail thumbnail--${thumbnailType} ${clickedMovie && clickedMovie?.id !== id ? "thumbnail--shadowed" : ""}`} key={index} onClick={handleThumbnailClick(id, image, info)}>
+            <button className="thumbnail__like_button"> 
+                <img src={info.is_favorite ? LikeIconPressed : LikeIcon} alt="like button"  /> 
+            </button>
             <img src={image} alt={info.name} className="thumbnail__image}" />
             <div className="thumbnail__info">
                 <h3>{info.name}</h3>

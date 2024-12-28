@@ -50,6 +50,27 @@
     aspect-ratio: 5/6;
 }
 
+.thumbnail__like_button {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    width: 2.3rem;
+    height: 2.3rem;
+
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    background: linear-gradient(to right, white 15%, rgb(176, 176, 176) 100%);
+}
+
+.thumbnail__like_button img {
+    height: 60%;
+    width: 60%;
+    vertical-align: middle;
+}
+
 .thumbnail > img {
 
     height: 100%;

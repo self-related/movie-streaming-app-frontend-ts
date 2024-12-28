@@ -21,7 +21,7 @@
             "year": 2022,
             "genre": "Sci-fi",
             "duration": 130,
-            "is_favorite": true,
+            "is_favorite": false,
             "rating": 8,
             "description": "A mysterious force knocks the moon from its orbit and sends it hurtling on a collision course toward earth."
         },
@@ -49,7 +49,7 @@
             "year": 2021,
             "genre": "Drama",
             "duration": 157,
-            "is_favorite": true,
+            "is_favorite": false,
             "rating": 8,
             "description": "When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel their legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately...murder."
         },
