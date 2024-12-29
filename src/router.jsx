@@ -3,6 +3,7 @@ import App from "./App";
 import Home from "./pages/home/Home";
 import Trending from "./pages/trending/Trending";
 import Favorites from "./pages/favorites/Favorites";
+import Welcome from "./pages/welcome/Welcome";
 
 export const mainRouter = createBrowserRouter([
     {
@@ -21,10 +22,10 @@ export const mainRouter = createBrowserRouter([
                 path: "/trending",
                 element: <Trending />,
             },
-            {
-                path: "/welcome",
-                element: <div>Temp Welcome Page</div>,
-            },
         ]
+    },
+    {
+        path: "/welcome",
+        element: <Welcome />
     }
 ]);

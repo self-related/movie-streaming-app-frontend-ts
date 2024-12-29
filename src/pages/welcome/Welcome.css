@@ -1,0 +1,54 @@
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(75deg, #6100c294 -5%, #000000b6 20%, #000000b6 25%, #6100c254 95%);
+    text-align: center;
+
+}
+
+.welcome-page > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.welcome_header > img {
+    width: 1.3rem;
+    height: 1.3rem;
+    vertical-align: text-top;
+}
+.welcome_header > h1 {
+    display: inline;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+.welcome_header p {
+    margin-top: 0.5rem;
+}
+
+.welcome_login button {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: #6100C2;
+
+    width: 215px;
+    height: 54px;
+
+    border-radius: 14px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.welcome_login a {
+    color: white;
+    font-weight: bold;
+}
