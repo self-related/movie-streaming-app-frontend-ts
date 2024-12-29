@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/home/Home";
 import Trending from "./pages/trending/Trending";
+import Favorites from "./pages/favorites/Favorites";
 
 export const mainRouter = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ export const mainRouter = createBrowserRouter([
             },
             {
                 path: "/favorites",
-                element: <div>Temp Favorites Page</div>,
+                element: <Favorites />,
             },
             {
                 path: "/trending",
