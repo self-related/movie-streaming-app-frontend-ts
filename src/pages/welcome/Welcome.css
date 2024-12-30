@@ -48,7 +48,14 @@
     cursor: pointer;
 }
 
-.welcome_login a {
+.welcome_login__links {
     color: white;
+}
+
+.welcome_login__links--bold {
     font-weight: bold;
+}
+
+.welcome_login__links--small {
+    font-size: 0.7rem;
 }

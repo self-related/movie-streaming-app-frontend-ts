@@ -18,7 +18,9 @@ export default function Welcome() {
             </header>
             <div className="welcome_login">
                 <button onClick={handleSignInClick}>Log in</button>
-                <p>No account? <Link to="/">Sign up</Link></p>
+                <p>No account? <Link to="/" className="welcome_login__links welcome_login__links--bold">Sign up</Link>
+                </p>
+                <p><Link to="/"className="welcome_login__links welcome_login__links--small">Proceed to the home page</Link></p>
             </div>
         </div>
     );
