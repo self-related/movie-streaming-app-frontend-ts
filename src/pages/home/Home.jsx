@@ -4,6 +4,8 @@ import BannerImage from "../../assets/banner.svg";
 import { useState } from "react";
 import { useEffect } from "react";
 import Gallery from "../../components/Gallery";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
     // временная заглушка на баннер
@@ -18,7 +20,17 @@ export default function Home() {
     const [trendingMovies, setTrendingMovies] = useState(null);
     const [continueMovies, setContinueMovies] = useState(null);
 
+    const [cookies] = useCookies([]);
+    const navigate = useNavigate();
+
+
     useEffect(() => {
+        if (cookies.first_visit !== false) {
+            navigate("/welcome");
+            return;
+        }
+    
+        
         fetch("/temp_trending_movies.json")
         .then(res => res.json())
         .then(data => setTrendingMovies(data));

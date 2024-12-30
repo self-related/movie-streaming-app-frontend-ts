@@ -1,12 +1,16 @@
 import WelcomeBackgroundImage from "/welcome.png";
 import "./Welcome.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 export default function Welcome() {
     const navigate = useNavigate();
     const handleSignInClick = () => {
         navigate("/");
     };
+
+    const [, setCookie] = useCookies([]);
+    setCookie("first_visit", "false", {path: "/", sameSite: true});
 
     return (
         <div className="welcome-page" >
