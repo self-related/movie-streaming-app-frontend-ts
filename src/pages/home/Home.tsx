@@ -7,6 +7,22 @@ import Gallery from "../../components/Gallery";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
+export interface MovieInfo {
+    name: string,
+    year: number,
+    genre: string,
+    duration: number,
+    is_favorite: boolean,
+    rating: number,
+    description: string
+}
+
+export interface Movie {
+    id: number,
+    info: MovieInfo,
+    image: string
+}
+
 export default function Home() {
     // временная заглушка на баннер
     const trendingMovie = {
@@ -17,10 +33,10 @@ export default function Home() {
         season: "Season 1"
     }
 
-    const [trendingMovies, setTrendingMovies] = useState(null);
-    const [continueMovies, setContinueMovies] = useState(null);
+    const [trendingMovies, setTrendingMovies] = useState<Movie[] | null>(null);
+    const [continueMovies, setContinueMovies] = useState<Movie[] | null>(null);
 
-    const [cookies] = useCookies([]);
+    const [cookies] = useCookies<string>([]);
     const navigate = useNavigate();
 
 

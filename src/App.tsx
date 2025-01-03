@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import './App.css'
-import NavBarLeft from './components/NavBarLeft';
-import NavBarTop from './components/NavBarTop';
+import NavBarLeft from './components/NavBarLeft.tsx';
+import NavBarTop from './components/NavBarTop.tsx';
 import { createContext, useContext, useState } from 'react';
-import DetailedInfo from './components/DetailedInfo';
+import DetailedInfo from './components/DetailedInfo.tsx';
 
 const ClickedMovieContext = createContext({});
 

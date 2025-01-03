@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import Gallery from "../../components/Gallery";
 import "./Favorites.css"
+import { Movie } from "../home/Home";
 
 export default function Favorites() {
-    const [favoriteMovies, setFavoriteMovies] = useState(null);
+    const [favoriteMovies, setFavoriteMovies] = useState<Movie[] | null>(null);
 
     useEffect(() => {
         fetch("/temp_all_movies.json")
         .then((res) => res.json())
-        .then((data) => {
-            const favData = data.filter((movie) => movie.info.is_favorite);
+        .then((data: Movie[]) => {
+            const favData = data.filter((movie: Movie) => movie.info.is_favorite);
             setFavoriteMovies(favData);
         })
     } ,[]);

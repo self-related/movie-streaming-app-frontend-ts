@@ -3,16 +3,23 @@ import "./Gallery.css";
 import { useClickedMovieContext } from "../App";
 import LikeIcon from "../assets/icons/heart.svg";
 import LikeIconPressed from "../assets/icons/like-icon-pressed.svg";
-import { handleLikeClick } from "../utils";
+import { handleLikeClick } from "../utils.ts";
 
+// type imports
+import { Movie } from "../pages/home/Home.tsx";
+import { MovieInfo } from "../pages/home/Home.tsx";
 
+interface GalleryProps {
+    movies: Movie[] | null,
+    large?: boolean
+}
 
-export default function Gallery({movies, large}) {
+export default function Gallery({movies, large}: GalleryProps) {
     const thumbnailType = large ? "large" : "compact"; // аттрибут для широких/узких превью
     
     const [clickedMovie, setClickedMovie] = useClickedMovieContext();
 
-    const handleThumbnailClick = (id, image, info) => (event) => {
+    const handleThumbnailClick = (id: number, image: string, info: MovieInfo) => (event: Event) => {
 
         // закрыть инфоблок, если повторный клик
         if (id === clickedMovie?.id) {
@@ -49,7 +56,7 @@ export default function Gallery({movies, large}) {
 
     }, [clickedMovie]);
 
-    const moviesList = movies?.map(({image, info, id}, index) => (
+    const moviesList = movies?.map(({image, info, id}: Movie, index: number) => (
         <div className={`thumbnail thumbnail--${thumbnailType} ${clickedMovie && clickedMovie?.id !== id ? "thumbnail--shadowed" : ""}`} key={index} onClick={handleThumbnailClick(id, image, info)}>
             
             <button className="thumbnail__like_button" onClick={handleLikeClick}> 
